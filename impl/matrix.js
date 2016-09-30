@@ -64,3 +64,50 @@ function subtractMatrices(lhs, rhs) {
 
   return result;
 }
+
+/**
+ * Multiply two matrices together, or one by a scalar
+ * @param {object} lhs left-hand side matrix
+ * @param {object} rhs right-hand side matrix
+ * @returns {object} the resultant matrix
+ */
+function multiplyMatrix(lhs, rhs) {
+  if(typeof(lhs) === "number" && validateMatrix(rhs)) {
+    // Swap the values round for convenience
+    var temp = rhs;
+    rhs = lhs;
+    lhs = temp;
+  }
+  if(validateMatrix(lhs) && typeof(rhs) === "number") {
+    // matrix * scalar
+    result = [];
+    for(var i = 0; i < lhs.length; i++) {
+      result[i] = [];
+      for(var j = 0; j < rhs.length; j++) {
+        result[i][j] = lhs[i][j] * rhs;
+      }
+    }
+
+    return result;
+  } else if(!validateMatrix(lhs) || !validateMatrix(rhs)) {
+    // Invalid parameters
+    throw "Invalid matrix supplied";
+  } else if(lhs[0].length !== rhs.length) {
+    // Vectors cannot be multiplied
+    throw "Left-hand matrix columns must match Right-hand side matrix rows";
+  } else {
+    // matrix * matrix
+    result = [];
+    for(var i = 0; i < lhs.length; i++) {
+      result[i] = [];
+      for(var j = 0; j < rhs.length; j++) {
+        result[i][j] = 0;
+        for(var k = 0; k < rhs.length; k++) {
+          result[i][j] += lhs[i][k] + rhs[k][j];
+        }
+      }
+    }
+
+    return result;
+  }
+}
