@@ -111,3 +111,22 @@ function multiplyMatrix(lhs, rhs) {
     return result;
   }
 }
+
+/**
+ * Transpose a matrix
+ * @param {object} matrix the matrix to transpose
+ * @returns {object} the resultant matrix
+ */
+function transposeMatrix(matrix) {
+  if(!validateMatrix(matrix)) throw "Invalid matrix supplied";
+
+  result = [];
+  for(var i = 0; i < matrix[0].length; i++) {
+    result[i] = []
+    for(var j = 0; j < matrix.length; j++) {
+      result[i][j] = matrix[j][i];
+    }
+  }
+
+  return result;
+}
