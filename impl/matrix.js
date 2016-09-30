@@ -31,36 +31,36 @@ function validateMatrix(matrix) {
  * @param {object} rhs right-hand side matrix
  * @returns {object} the resultant matrix
  */
- function addMatrices(lhs, rhs) {
-   if(!validateMatrix(lhs) || !validateMatrix(rhs)) throw "Invalid matrix supplied";
+function addMatrices(lhs, rhs) {
+ if(!validateMatrix(lhs) || !validateMatrix(rhs)) throw "Invalid matrix supplied";
 
-   result = [];
-   for(var i = 0; i < lhs.length; i++) {
-     result[i] = [];
-     for(var j = 0; j < rhs.length; j++) {
-       result[i][j] = lhs[i][j] + rhs[i][j];
-     }
+ result = [];
+ for(var i = 0; i < lhs.length; i++) {
+   result[i] = [];
+   for(var j = 0; j < rhs.length; j++) {
+     result[i][j] = lhs[i][j] + rhs[i][j];
    }
-
-   return result;
  }
 
- /**
-  * Subtracts right-hand matrix from the left (L-R)
-  * @param {object} lhs left-hand side matrix
-  * @param {object} rhs right-hand side matrix
-  * @returns {object} the resultant matrix
-  */
-  function subtractMatrices(lhs, rhs) {
-    if(!validateMatrix(lhs) || !validateMatrix(rhs)) throw "Invalid matrix supplied";
+ return result;
+}
 
-    result = [];
-    for(var i = 0; i < lhs.length; i++) {
-      result[i] = [];
-      for(var j = 0; j < rhs.length; j++) {
-        result[i][j] = lhs[i][j] - rhs[i][j];
-      }
+/**
+* Subtracts right-hand matrix from the left (L-R)
+* @param {object} lhs left-hand side matrix
+* @param {object} rhs right-hand side matrix
+* @returns {object} the resultant matrix
+*/
+function subtractMatrices(lhs, rhs) {
+  if(!validateMatrix(lhs) || !validateMatrix(rhs)) throw "Invalid matrix supplied";
+
+  result = [];
+  for(var i = 0; i < lhs.length; i++) {
+    result[i] = [];
+    for(var j = 0; j < rhs.length; j++) {
+      result[i][j] = lhs[i][j] - rhs[i][j];
     }
- 
-    return result;
   }
+
+  return result;
+}
