@@ -130,3 +130,26 @@ function transposeMatrix(matrix) {
 
   return result;
 }
+
+/**
+ * Generates and identity matrix
+ * @param {number} dimension the number of rows and columns
+ * @returns {object} the identity matrix
+ */
+function identityMatrix(dimension) {
+  if(typeof(dimension) !== "number" || dimension <= 0) throw "Dimension must be a number greater than 0";
+
+  var result = [];
+  for(var i = 0; i < dimension; i++) {
+    result[i] = [];
+    for(var j = 0; j < dimension; j++) {
+      if(i === j) {
+        result[i][j] = 1;
+      } else {
+        result[i][j] = 0;
+      }
+    }
+  }
+
+  return result;
+}
