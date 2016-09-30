@@ -153,3 +153,33 @@ function identityMatrix(dimension) {
 
   return result;
 }
+
+/**
+ * Calculates the determinant of a matrix recurrsively
+ * @param {object} matrix the matrix needing a determinant
+ * @returns {number} the determinant
+ */
+function determinant(matrix) {
+  if(!validateMatrix(matrix)) throw "Invalid matrix supplied";
+
+  if(matrix.length === 1 && matrix[0].length === 1) return matrix[0][0]; // If the matrix has a single value return the number
+
+  var det = 0;
+  for(var col = 0; col < matrix[0].length; col++) {
+    var minorMatrix = [];
+    for(var i = 1; i < matrix.length; i++) {
+      minorMatrix[i - 1] = [];
+      for(var j = 0; j < matrix[0].length; j++) {
+        minorMatrix[i - 1].push(matrix[i][j]);
+      }
+    }
+    var value = matrix[0][col] * determinant(minorMatrix);
+    if(col % 2) {
+      det -= value;
+    } else {
+      det += value;
+    }
+  }
+
+  return det;
+}
