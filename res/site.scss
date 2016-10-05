@@ -1,0 +1,148 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$text-color:        #333;
+$text-color-light:  #ededed;
+
+$blue:  #037d94;
+$green: #8adf00;
+
+$base-font-size:   16px;
+$text-color:       #333;
+
+$small-font-size: 14px;
+
+$sans-serif: "Merriweather Sans", Helvetica, Arial, sans-serif;
+$monospace:  "Ubuntu Mono", Consolas, monospace;
+
+$max-page-width:    1008px;
+
+body {
+    color: $text-color;
+    font-family: $sans-serif;
+    font-size: $base-font-size;
+    margin: 0px;
+}
+
+header {
+    background-color: white;
+    color: $green;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    overflow: auto;
+}
+
+header nav ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    outline: 0px 0px 0px 0px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+
+    &:active,
+    &:focus, {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+.content {
+    max-width: $max-page-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title {
+    background-color: $blue;
+    color: $text-color-light;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-height: 15em;
+}
+
+#title h1 {
+    font-size: 5em;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 8px 0px;
+}
+
+#title .desc {
+    font-weight: bold;
+}
+
+#quickview {
+    overflow: auto;
+    color: $text-color-light;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    left: 0px;
+}
+
+#quickview .content {
+    background-color: $blue;
+    overflow: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#quickview a {
+    color: inherit;
+    border: 1px solid $text-color-light;
+    border-radius: 4px;
+    padding: 4px;
+
+    &:hover,
+    &:active, {
+        color:inherit;
+    }
+}
+
+#quickview h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+footer {
+    background-color: $text-color;
+    color: $text-color-light;
+    font-size: $small-font-size;
+    overflow: auto;
+    padding-top: 4px;
+    padding-bottom: 4xp;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+
+    &:active,
+    &:hover, {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+footer img {
+    width: 25%;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+}
