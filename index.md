@@ -7,11 +7,12 @@ Computer Science Maths gives an overview of the different maths concepts that ar
 Topics attempt to develop ideas from the basics through to more advanced concepts
 
 ## Basic Symbols/Conventions
-Some symbols are common across all Topics
+Some mathematical symbols are common across all topics
 
 |Symbol|Meaning|
 |------|-------|
 |=|Equals|
+|!= or ≠|Not equal|
 |==|Is equal to|
 |=== or ≡|Is the same as|
 |+|Addition|
