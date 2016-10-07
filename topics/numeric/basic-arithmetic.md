@@ -8,6 +8,7 @@ Basic arithmetic underpins numerical maths, and provides the basis to develop al
 
 ## Assumed knowledge
 The following assumes that you already have an understanding of:
+
 * Addition, Subtraction, Multiplication and Division
 * How to calculate powers and roots of a number
 * Modulus is the magnitude of a number (the number without it being positive or negative)
@@ -29,11 +30,13 @@ Operators are applied in a standard order to remove the possibility of any ambig
 Modulo is not commonly included in operator precedence lists, and so it is always safest to enclose a module operation in brackets, and hence it is not given here.
 
 This ensures a consistent answer and doesn't always rely on the inclusion of brackets to clarify the calculation.  For clarity, however, it doesn't do any harm to provide brackets in extended equations to make the calculation clearer.  Operator precedence can change the result of equations comparted to if it were tackled linearly.  For example:
+
 * 3 + 5 x 2 = 8 x 2 = 16 if performed linearly
 * 3 + 5 x 2 = 3 + 10 = 13 if operator precedence is followed
 
 ## Operator Commutativity
 An operation is commutative if the numbers or symbols expressed on either side can be switched and still achieve the same result.  In the context of standard decimal operations:
+
 * **Addition** is a commutative operation (5 + 3 == 3 + 5)
 * **Multiplication** is also commutative (5 x 3 == 3 x 5)
 * **Subtraction** is not commutative (5 - 3 ≠ 3 - 5)
@@ -73,6 +76,7 @@ The same rules are followed for both negative and positive numbers.  This is dis
 
 ## Significant figures
 This is similar to rounding, however rather than performing the process to a precision it is performed to a number of digits starting with the first non-zero digit.  To 3 significant digits:
+
 * the number 12345 becomes 12300
 * the number 12.345 becomes 12.3
 * the number 0.0012345 becomes 0.00123
@@ -87,6 +91,7 @@ Computer systems can have difficulty representing a recurring decimal, hence the
 
 ## Standard form
 Standard form is a method for expressing very long numbers in a more compact or readable way.  It uses the notation of Xx10<sup>Y</sup>.  This is a fairly simple concept as it is just representing a number as a multiplication.  For example:
+
 * 12345 can be represented as 12.345x10<sup>3</sup>
 * 5000000 can be represented as 5x10<sup>6</sup>
 * 0.000006 can be represented as 6x10<sup>-5</sup>

@@ -63,6 +63,11 @@ header nav ul li a {
     margin-right: auto;
 }
 
+table th, table td {
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+
 #title {
     background-color: $blue;
     color: $text-color-light;
