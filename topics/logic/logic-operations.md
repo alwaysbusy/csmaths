@@ -2,6 +2,7 @@
 layout: default
 permalink: /topic/logic/logic-operations
 title: Logic Operations
+description: Basic operations such as And, Or and Not
 ---
 
 Logic operations are used on binary data to calculate logic information about their values.  Each operation is represented by a truth table which gives at least one *output* based on the inputs it receives.  There are three basic operations (And, Or and Not) from which all other operations can be built, but are expressed separately for convenience.

@@ -57,6 +57,25 @@ header nav ul li a {
     }
 }
 
+header nav ul li ul {
+  display: none;
+  z-index: 5;
+  border: 1px solid $blue;
+  position: absolute;
+  background-color: #FFF;
+}
+
+header nav ul li:hover ul {
+  display: block;
+}
+
+header nav ul li ul li {
+  display: block;
+  border-bottom: 1px solid $blue;
+  margin: 0px 0px 0px 0px;
+  padding: 4px 4px 4px 4px;
+}
+
 .content {
     max-width: $max-page-width;
     margin-left: auto;
