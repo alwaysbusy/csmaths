@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <link rel='stylesheet' href="{{ "/res/site.css" | relative_url }}" type="text/css">
-        <script type="application/javascript" src="{{ "/res/site.js" | relative_url }}"></script>
+        <link rel='stylesheet' href="{{ "/res/site.css" | absolute_url }}" type="text/css">
+        <script type="application/javascript" src="{{ "/res/site.js" | absolute_url }}"></script>
 
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     </head>
@@ -23,13 +23,13 @@
             <div class="content">
                 <nav>
                     <ul>
-                        <li style="font-weight:bold"><a href="{{ site.baseurl }}/" title="Computer Science Maths">Computer Science Maths</a></li>
+                        <li style="font-weight:bold"><a href="{{ site.url }}/" title="Computer Science Maths">Computer Science Maths</a></li>
                         {% for page in site.pages %}{% if page.url contains '/topic/' and page.use == "index" %}
                           <li>
-                            <a href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}">{{ page.title }}</a>
+                            <a href="{{ page.url | prepend: site.url }}" title="{{ page.title }}">{{ page.title }}</a>
                             <ul>
                               {% for article in site.pages %}{% if article.url contains page.url and article.url != page.url %}
-                                <li><a href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">{{ article.title }}</a></li>
+                                <li><a href="{{ article.url | prepend: site.url }}" title="{{ article.title }}">{{ article.title }}</a></li>
                               {% endif %}{% endfor %}
                             </ul>
                           </li>
@@ -49,7 +49,7 @@
           {% if page.use == "index" %}
             <ul>
               {% for article in site.pages %}{% if article.url contains page.url and article.url != page.url %}
-                <li><a href="{{ article.url | prepend: site.baseurl }}" title="{{ article.title }}">{{ article.title }}</a>{% if article.description %} - {{ article.description }}{% endif %}</li>
+                <li><a href="{{ article.url | prepend: site.url }}" title="{{ article.title }}">{{ article.title }}</a>{% if article.description %} - {{ article.description }}{% endif %}</li>
               {% endif %}{% endfor %}
             </ul>
           {% endif %}
@@ -57,7 +57,7 @@
         <footer>
             <div class="content">
                 <div class="col-xs-3 center">
-                    <a href="http://www.hurfo.com"><img src="{{ "/res/brand/Hgreyl.png" | relative_url }}" alt="Owen Hurford" /></a>
+                    <a href="http://www.hurfo.com"><img src="{{ "/res/brand/Hgreyl.png" | absolute_url }}" alt="Owen Hurford" /></a>
                     <p>Designed and built by <br /> <a href="http://www.hurfo.com/" target="_blank">Owen Hurford</a></p>
                 </div>
             </div>

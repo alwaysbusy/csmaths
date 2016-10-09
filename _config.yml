@@ -1,8 +1,7 @@
 # Site settings
 title: Computer Science Maths
 description: Information about maths topics useful for Computer Science, including implementations in JavaScript where appropriate
-url: "http://alwaysbusy.github.io/"
-baseurl: "csmaths"
+url: "https://alwaysbusy.github.io/csmaths/"
 
 # Build settings
 markdown: kramdown
