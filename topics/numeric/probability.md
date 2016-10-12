@@ -65,3 +65,13 @@ Taking the previous example, all combinations of two characters from the three w
 
 ## Binomial Probability Distribution
 In a binomial distribution there are two options, often referred to as success (*p*) and failure (*q*).  Probability for a binomial event is such that P(*p*) + P(*q*) = 1.  By applying knowledge of combinations we are able to account for the likelihood of a certain success rate (*r*) over a number of trials (*n*), to give a probability of (*n*! / (*n* - *r*)!*r*!)*q*<sup>*n* - *r*</sup>*p*<sup>*r*</sup>.
+
+### Standard Deviation
+Standard deviation is one of several parts of probability that we can calculate by knowing other properties of the distribution.
+
+To calculate the standard deviation we must first know the mean.  This is given as μ = Σ(*fx*) / *N*.  This is vastly simplified for a binomial distribution to be μ = *np*, where n is the number of possible outcomes and p is the probability of success in a single trial.
+
+Standard deviation gives an indication of the average distance from the mean.  For a non-binomial distribution this can be a very complex calculation.  For a binomial distribution, however, the standard deviation is given as σ = √(μ*q*) where q is the probability of failure in a single trial.
+
+## Continuous Probability Distribution
+A binomial distribution only handles discreet events, but the majority of real-world events have a continuous range of possibilities.  In continuous events the probability is considered to lie within certain limiting variables on the normal distribution curve.  In practice, the standard normal curve is used to place x=0 at the centre of the curve.
