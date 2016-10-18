@@ -37,7 +37,7 @@ Now we know the probability P(HH) we also know this must be the probability P(TT
 Events and values do have a relation to one another.  An event can either be:
 
 * **Independent** - Does not rely on any other event taking place (that we are concerned by)
-* **Dependent** - Is influenced by another event of concern (hence probability may be expressed as P(*m*|*n*) if appropriate)
+* **Dependent** - Is influenced by another event of concern (hence probability may be expressed as P(*m*&#124;*n*) if appropriate)
 
 Dependence, in particular, is introduced often in subtle ways.  Considering
 
@@ -47,8 +47,8 @@ a dependence between the first and second events exists as a ball is removed lea
 
 Events and their values may also be related to one another as:
 
-* **Mutually exclusive** - Two or more events which may never occur at the same time (such as rolling a 1 and a 2 on a die, since it is physically impossible for a standard die to read multiple values).  The probability of such an event occurring is P(A || B) = P(A) + P(B).
-* **Mutually non-exclusive** - Two events that may occur simultaneously (such as rolling a multiple of two and a multiple of three on a die).  The probability of such events occurring is given as P(A || B) = P(A) + P(B) - P(A, B)
+* **Mutually exclusive** - Two or more events which may never occur at the same time (such as rolling a 1 and a 2 on a die, since it is physically impossible for a standard die to read multiple values).  The probability of such an event occurring is P(A &#124;&#124; B) = P(A) + P(B).
+* **Mutually non-exclusive** - Two events that may occur simultaneously (such as rolling a multiple of two and a multiple of three on a die).  The probability of such events occurring is given as P(A &#124;&#124; B) = P(A) + P(B) - P(A, B)
 
 ## Permutations and Combinations
 The simplest way to think of a permutation is a way of arranging a subset of symbols from an alphabet.  The easiest way of calculating this is using the **P** function on a calculator (often stylised as <sup>*n*</sup>**p**<sub>*r*</sub>).  This can be better expressed as <sup>*n*</sup>**p**<sub>*r*</sub> = *n*! / (*n* - *r*)!
