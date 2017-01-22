@@ -66,4 +66,11 @@ The determinant is made up of the sum of the value of each location and it's cof
 For a 3x3 matrix the determinant would be calculated as $\|(a,b,c),(d,e,f),(g,h,i)\| = a\|(e,f),(h,i)\| + -b\|(d,f),(g,i)\| + c\|(d,e),(g,h)\| + -d\|(b,c),(h,i)\| + e\|(a,c),(g,i)\| + -f\|(a,b),(g,h)\| + g\|(b,c),(e,f)\| + -h\|(a,c),(d,f)\| + i\|(a,b),(d,e)\|$
 $= a(ei-fh) - b(di-fg) + c(dh-eg) - d(bi-ch) + e(ai-cg) - f(ah-bg) + g(bf-ce) - h(af-cd) + i(ae-bd)$
 
-The cofactors can also be used to make a cofactor matrix, the transpose of which is referred to as the Adjoin of the original square matrix.
+The cofactors can also be used to make a cofactor matrix, the transpose of which is referred to as the Adjoint of the original square matrix.
+
+## Inverse
+The Adjoint matrix as mentioned with the determinant can be used to find the Inverse (**A**<sup>-1</sup>) of a matrix.
+
+For a 3x3 matrix $bbA = ((a,b,c),(d,e,f),(g,h,i))$, $bbA^-1 = 1/\|bbA\|((\|(e,f),(h,i)\|, -\|(d,f),(g,i)\|, \|(d,e),(g,h)\|),(-\|(b,c),(h,i)\|, \|(a,c),(g,i)\|, -\|(a,b),(g,h)\|),(\|(b,c),(e,f)\|, -\|(a,c),(d,f)\|, \|(a,b),(d,e)\|))$
+
+Checking that an inverse has been calculated correctly can be done by multiplying the inverse by the original to get the identity matrix ($bbA^-1\*bbA = bbI$).
