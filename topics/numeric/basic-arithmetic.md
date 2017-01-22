@@ -21,7 +21,7 @@ The following assumes that you already have an understanding of:
 Operators are applied in a standard order to remove the possibility of any ambiguity in calculations.  This is commonly remembered through the BODMAS or BIDMAS rule.  The rules only apply to the numbers or symbols immediately surrounding the operator.
 
 1. **Brackets** - Any calculations contained within brackets are calculated first and the values used in place of the statement within the brackets
-2. **Indices** - Also known as powers of a number (denoted as x^y or x<sup>y</sup>), powers are calculated as the number x recursively multiplied by itself y times
+2. **Indices** - Also known as powers of a number (denoted as x^y or $x^y$), powers are calculated as the number x recursively multiplied by itself y times
 3. **Division** - Any division operation or number expressed as a fraction
 4. **Multiplication**
 5. **Addition**
@@ -31,16 +31,16 @@ Modulo is not commonly included in operator precedence lists, and so it is alway
 
 This ensures a consistent answer and doesn't always rely on the inclusion of brackets to clarify the calculation.  For clarity, however, it doesn't do any harm to provide brackets in extended equations to make the calculation clearer.  Operator precedence can change the result of equations comparted to if it were tackled linearly.  For example:
 
-* 3 + 5 x 2 = 8 x 2 = 16 if performed linearly
-* 3 + 5 x 2 = 3 + 10 = 13 if operator precedence is followed
+* $3+5\*\*2 = 8\*\*2 = 16$ if performed linearly
+* $3+5\*\*2 = 3+10 = 13$ if operator precedence is followed
 
 ## Operator Commutativity
 An operation is commutative if the numbers or symbols expressed on either side can be switched and still achieve the same result.  In the context of standard decimal operations:
 
-* **Addition** is a commutative operation (5 + 3 == 3 + 5)
-* **Multiplication** is also commutative (5 x 3 == 3 x 5)
-* **Subtraction** is not commutative (5 - 3 ≠ 3 - 5)
-* **Division** is also not commutative (5 / 3 ≠ 3 / 5)
+* **Addition** is a commutative operation ($5+3 == 3+5$)
+* **Multiplication** is also commutative ($5xx3 == 3xx5$)
+* **Subtraction** is not commutative ($5-3 ≠ 3-5$)
+* **Division** is also not commutative ($5/3 ≠ 3/5$)
 * **Modulo** is therefore also not commutative
 
 If dealing with other cases than decimal maths, then different commutativity rules will apply.  Whilst they apply for cases where the numbers are represented in other forms (such as binary or hexadecimal), they do not all apply if conducting operations on non-decimals such as a matrices (covered at another point).
@@ -85,13 +85,13 @@ This is similar to rounding, however rather than performing the process to a pre
 It may be necessary to insert trailing zeros to a number to bring it to the correct number of significant digits (since any zero after the first non-zero number is significant).  This would lead to 12.3 to 5 significant digits being 12.300.  The concept is similar to including leading zeros with a number to allow it to align with other larger numbers correctly; it is for presentation and clarity, and does not affect the value of the number.
 
 ## Recurring decimals
-A recurrent decimal is one which can be expressed as a decimal of unending length but can be represented by a recurring string of digits.  For example, 1/3 is a recurring decimal as it can be expressed as 0.3 where the 3 is repeated infinitely.  The repeated digits may be longer than a single digit, or indeed not all of the digits given after the decimal place (but rather just the final one(s)).
+A recurrent decimal is one which can be expressed as a decimal of unending length but can be represented by a recurring string of digits.  For example, $1/3$ is a recurring decimal as it can be expressed as 0.3 where the 3 is repeated infinitely.  The repeated digits may be longer than a single digit, or indeed not all of the digits given after the decimal place (but rather just the final one(s)).
 
 Computer systems can have difficulty representing a recurring decimal, hence the need to round to a precision or truncate a number.  The number can also be represented as a fraction (two integers requiring division) if such precision is needed.  In the case of a non-recurring unending decimal (such as Π) then it must be rounded to a precision in order for a computer to be able to store or process it.
 
 ## Standard form
-Standard form is a method for expressing very long numbers in a more compact or readable way.  It uses the notation of Xx10<sup>Y</sup>.  This is a fairly simple concept as it is just representing a number as a multiplication.  For example:
+Standard form is a method for expressing very long numbers in a more compact or readable way.  It uses the notation of $Xxx10^Y$.  This is a fairly simple concept as it is just representing a number as a multiplication.  For example:
 
-* 12345 can be represented as 12.345x10<sup>3</sup>
-* 5000000 can be represented as 5x10<sup>6</sup>
-* 0.000006 can be represented as 6x10<sup>-5</sup>
+* 12345 can be represented as $12.345xx10^3$
+* 5000000 can be represented as $5xx10^6$
+* 0.000006 can be represented as $6xx10^-5$

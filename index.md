@@ -34,3 +34,6 @@ This guide is by no means complete.  Below are some recommended books and resour
 |Resource|Details|
 |--------|-------|
 |[Engineering Mathematics, K. A. Stroud](http://www.plagrave.com/stroud)|Covers a lot of mathematics topics relating to all engineering and science disciplines, and has online practice questions available|
+
+## Other acknowledgements
+The site is hosted by [GitHub Pages](https://pages.github.com/) which uses [Jekyll](https://jekyllrb.com) to render pages.  Some theming is provided by [Bootstrap](https://getbootstrap.com), and JavaScript is enhanced with [jQuery](https://jquery.com/).  Maths is rendered using [MathJax](https://www.mathjax.org).
