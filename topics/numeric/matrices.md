@@ -46,6 +46,8 @@ The Identity Matrix (also known as the unit matrix) is a matrix which contains o
 
 $bbI = ((1,0,0),(0,1,0),(0,0,1))$
 
+Similar special matrices exist which contain solely ones and solely zeros.
+
 ## Determinant
 Determinants can only be calculated for a square matrix.  There are different methods for a 2x2 matrix, and larger ones.
 
@@ -74,3 +76,21 @@ The Adjoint matrix as mentioned with the determinant can be used to find the Inv
 For a 3x3 matrix $bbA = ((a,b,c),(d,e,f),(g,h,i))$, $bbA^-1 = 1/\|bbA\|((\|(e,f),(h,i)\|, -\|(d,f),(g,i)\|, \|(d,e),(g,h)\|),(-\|(b,c),(h,i)\|, \|(a,c),(g,i)\|, -\|(a,b),(g,h)\|),(\|(b,c),(e,f)\|, -\|(a,c),(d,f)\|, \|(a,b),(d,e)\|))$
 
 Checking that an inverse has been calculated correctly can be done by multiplying the inverse by the original to get the identity matrix ($bbA^-1\*bbA = bbI$).
+
+A matrix is said to be orthogonal if the inverse is equal to the transpose ($bbA^-1 = bbA^T$).
+
+## Eigenvalues and Eigenvectors
+Eigenvectors allow us to express a non-zero transformation with an unchanging direction, whilst the corresponding Eigenvalue represents a direction and scale factor.  The simplest way to calculate this is the calculation $bbAbbx = lambdabbx$, where $bbx$ is the eigenvector and $lambda$ is the eigenvalue.  The equation that the eigenvector matrix must be square and with both its height and width being equal to the height of matrix $bbA$.  The equation can be rearranged to create a simpler representation of the problem.
+
+$bbAbbx = lambdabbx rArr bbAbbx-lambdabbx = 0 rArr (bbA-lambdabbI)bbx = 0$
+
+This form expresses the equation as a set of linear equations, with $bbI$ having the same dimensions as $bbx$.  Therefore, $\|bbA-lambdabbx\| = 0$ must be true, making determining the eigenvalue and vector much simpler.  There will be multiple solutions to the linear equations so multiple correct values of $lambda$.  Each of these will have a corresponding eigenvector $bbx$ which will be either a column or row vector.
+
+Another logical rearrangement of the original eigenvector equation allows it to be expressed as $bbA = bbxlambdabbx^-1$.
+
+## Eigendecomposition
+Eigendecomposition utilises the eigenvalues and eigenvectors to calculate powers, matrices inverses and symmetry.  It creates the row matrix of eigenvectors $bbU$ and the diagonal matrix of eigenvalues $bbLambda$.
+
+$bbAbbU = bbUbbLambda$ where $bbU = (bbx_1, bbx_2, cdots, bbx_n)$, $bbLambda = ((lambda_1, 0, cdots, 0), (0, lambda_2, cdots, 0), (vdots, vdots, ddots, vdots), (0, 0, cdots, lambda_n))$
+
+It can also be used in the form $bbA = bbUbbLambdabbU^-1$ (very similar to how the equation of eigenvalues and eigenvectors may be given).
