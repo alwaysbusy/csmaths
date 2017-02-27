@@ -63,6 +63,11 @@ For 2 variables: $P(x, y) = P(x\|y)P(y) = P(y\|x)P(x)$
 
 For 3 variables: $P(x, y, z) = P(x, y \| z)P(z) = P(z \| y, z)P(y\|z)P(z)$
 
+### Markov Chains
+In the case where variables are dependent on each other in so much that they are dependent on the previous variable then it is possible to construct a Markov Chain to calculate probability.
+
+$P(x, y, z) = P(x)P(y\|x)P(z\|y)$
+
 ## Bayes Theorem
 Similar to the chain rule, Bayes Theorem gives the relationship between conditional and marginal probabilities.  It can be derived from the 2 variable chain rule.
 
