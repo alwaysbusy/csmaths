@@ -33,6 +33,12 @@ $P(HH |\| \T\T) = P(HH) + P(\T\T)
              = 0.25 + 0.25
              = 0.5$
 
+If each coin is expressed as a variable $c_n$ then $P(HH)$ could be rewritten as $P(c_1=H, c_2=H)$ (Non-specifically written as $P(c_1, c_2)$).
+
+Knowing a combined probability also allows the calculation of the probability of a single occurrence (known as the marginal probability).
+
+$P(x) = sum_yP(x, y)$, $P(y) = sum_xP(x, y)$
+
 ## Event types
 Events and values do have a relation to one another.  An event can either be:
 
@@ -49,6 +55,18 @@ Events and their values may also be related to one another as:
 
 * **Mutually exclusive** - Two or more events which may never occur at the same time (such as rolling a 1 and a 2 on a die, since it is physically impossible for a standard die to read multiple values).  The probability of such an event occurring is $P(A \|\| B) = P(A) + P(B)$.
 * **Mutually non-exclusive** - Two events that may occur simultaneously (such as rolling a multiple of two and a multiple of three on a die).  The probability of such events occurring is given as $P(A \|\| B) = P(A) + P(B) - P(A, B)$
+
+## Chain Rule
+The chain rule can be used to demonstrate the relationship between conditional, combined and marginal probabilities.
+
+For 2 variables: $P(x, y) = P(x\|y)P(y) = P(y\|x)P(x)$
+
+For 3 variables: $P(x, y, z) = P(x, y \| z)P(z) = P(z \| y, z)P(y\|z)P(z)$
+
+## Bayes Theorem
+Similar to the chain rule, Bayes Theorem gives the relationship between conditional and marginal probabilities.  It can be derived from the 2 variable chain rule.
+
+$P(x\|y) = (P(y\|x)P(x))/(P(y))$
 
 ## Permutations and Combinations
 The simplest way to think of a permutation is a way of arranging a subset of symbols from an alphabet.  The easiest way of calculating this is using the **P** function on a calculator (often stylised as <sup>*n*</sup>**p**<sub>*r*</sub>).  This can be better expressed as <sup>*n*</sup>**p**<sub>*r*</sub> = n!/(n-r)!
@@ -75,3 +93,17 @@ Standard deviation gives an indication of the average distance from the mean.  F
 
 ## Continuous Probability Distribution
 A binomial distribution only handles discreet events, but the majority of real-world events have a continuous range of possibilities.  In continuous events the probability is considered to lie within certain limiting variables on the normal distribution curve.  In practice, the standard normal curve is used to place x=0 at the centre of the curve.
+
+## Types of variables
+There are three main types of variables to consider:
+
+* **Stochastic** - A random variable with a random distribution
+* **Independent** - Two variables have no affect on each other ($P(x_1, x_2) = p(x_1)p(x_2)$)
+* **Gaussian** - Defined with the Gaussian distribution $p(x) = (1/sqrt(2pitheta^2))exp(-((2-mu)^2/(2delta^2)))$ where $mu$ is the mean and $delta^2$ is the variance
+
+Some of these are familiar from Event Types.  They are also in addition to types of data they may contain:
+
+* **Discreet** - Predefined values from a Set
+* **Continuous** - Data can take any value within the number space (subject to suitable constraints)
+
+For example, a single binary bit is a discreet piece of data whilst a number expressed in binary would be continuous.

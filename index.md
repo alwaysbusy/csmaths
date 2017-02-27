@@ -27,6 +27,7 @@ Some mathematical symbols are common across all topics
 |∑|Summation|
 |*n*!|Factorial|
 |&#124;*n*&#124;|Modulus/Magnitude|
+|exp|Exponential|
 
 ## Further Reading
 This guide is by no means complete.  Below are some recommended books and resources that will help with understanding topics further.
