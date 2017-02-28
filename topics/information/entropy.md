@@ -67,3 +67,6 @@ Joint differential entropy can be given as $h(bbX) = int_bbsP(bbx)logP(bbx).d^nb
 Mutual information can also be expressed from differential entropy values.
 
 $I(X:Y) = h(X)+h(Y)-h(X,Y) = h(X)-h(X\|Y) = h(Y)-h(Y\|X)$
+
+## Data Compression
+Entropy relates strongly to data compression, the mapping of a symbol code *C* for a variable *X* from it's alphabet to a set of binary strings ${0,1}^\*$.  When compressing a code must be uniquely decodable otherwise it is impossible to return the true value.  The minimum expected length of any encoding is $L(C,X) = H(X)$ (the Shannon Entropy).  This can be developed further to say $H(X)<=L(C,X)<=H(X)+1$.  The encoding will also be optimal if the random variable is uniform.
