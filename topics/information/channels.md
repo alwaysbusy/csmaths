@@ -24,3 +24,15 @@ Across a block channel an *n* symbol code word will be transmitted at a rate of 
 $P_(err) = P(m' != m) = sum_m(P(m' != m\|m)P(m))$ where $P(m) = 1/M$
 
 Error free communication can be achieved across a channel if the rate is less than the channel capacity.  In cases where the rate is greater than the channel capacity error tolerance can be developed for rates up to $R_(max) = C/(1-H_2(P_(err)))$.
+
+## Gaussian Channels
+A Gaussian Channel is affected by noise variable with a mean of zero and a variance of *N*.  Band-limiting may also be applied to the channel as a result of the hardware used for communication.
+
+## Networks
+A network is a group of *N* nodes communicating with each other.  There are several different types of channel within a network.
+
+* **Multiple Access** - *m* stations are able to communicate with a single receiver ($Y = sum_(k=1)^mX_k+ccN(0, N)$)
+* **Broadcast** - One transmitter communicating with *m* receivers (If receivers are working together then it may be possible to derive the message from a combination of them, since each receiver is subject to different noise) ($Y_1=X+Z_1, Y_2=X+Z_2, ...$)
+* **Relay** - *X* communicates with *Y* via an intermediate receiver *Y<sub>1</sub>* ($Y_1=X+Z_1, Y=Y_1+X_1+Z_2$)
+* **Interference** - A message may suffer interference and be delivered to an incorrect receiver ($Y_1=X_1+thetaX_2+Z_1, Y_2=X_2+thetaX1+Z_2$ where $theta$ is the probability of a misdirected message)
+* **Two-Way** - As an interference network however each sender is also a receiver.  It has a solution only as a Gaussian Channel and when modelled as two one-way interference channels.
