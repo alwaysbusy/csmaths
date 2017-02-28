@@ -32,7 +32,7 @@
             <div class="content">
                 <nav>
                     <ul>
-                        <li style="font-weight:bold"><a href="{{ site.url }}/" title="Computer Science Maths">Computer Science Maths</a></li>
+                        <li style="font-weight:bold"><a href="{{ site.url }}/" title="{{ site.title }}">{{ site.title }}</a></li>
                         {% for page in site.pages %}{% if page.url contains '/topic/' and page.use == "index" %}
                           <li>
                             <a href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}">{{ page.title }}</a>
