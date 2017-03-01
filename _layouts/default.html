@@ -21,6 +21,14 @@
           });
         </script>
         <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>
+        <script type="application/javascript" src="{{ "/script/cytoscape.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript">
+          cyDefaultStyles = [
+            {selector: "node[label], edge[label]", style: {"label": "data(label)"}},
+            {selector: "edge[targetarrow]", style: {"curve-style": "bezier", "target-arrow-shape": "data(targetarrow)"}}
+          ];
+        </script>
+        <style type="text/css">.cy{width:100%;height:300px}.cy-small{width:100%;height:150px}</style>
 
         <link rel='stylesheet' href="{{ "/res/site.css" | prepend: site.baseurl }}" type="text/css">
         <script type="application/javascript" src="{{ "/res/site.js" | prepend: site.baseurl }}"></script>
