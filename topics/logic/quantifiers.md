@@ -13,4 +13,4 @@ The existential quantifier is used to mean there is a value such that the statem
 
 ## Universal
 
-The universal quantifier is used to mean that for all values the statement is true. For example, the statement $AA x, x*x = x^2$ is satisfied by any value. The example given for existential, if the existential operator were replaced with the universal, would not hold true since there would be values for which it did not hold.
+The universal quantifier is used to mean that for all values the statement is true. For example, the statement $AA x, x xx x = x^2$ is satisfied by any value. The example given for existential, if the existential operator were replaced with the universal, would not hold true since there would be values for which it did not hold.
